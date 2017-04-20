@@ -1,0 +1,34 @@
+{
+  "name": "unexpected-preact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/unexpected-preact.js",
+  "scripts": {
+    "test": "mocha --compilers js:babel-register src/**/*.spec.js",
+    "build": "babel src -d lib --source-maps",
+    "prepublish": "npm run build"
+  },
+  "keywords": [],
+  "author": "Dave Brotherstone",
+  "license": "MIT",
+  "dependencies": {
+    "magicpen-prism": "^2.3.0",
+    "unexpected-htmllike": "^2.1.2",
+    "unexpected-htmllike-preact-adapter": "^1.1.0",
+    "unexpected-htmllike-preactrendered-adapter": "^1.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.9.1",
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.24.0",
+    "jsdom": "^9.12.0",
+    "mocha": "^3.2.0",
+    "preact": "^8.1.0",
+    "unexpected": "^10.26.3"
+  },
+  "peerDependencies": {
+    "preact": ">= 7.0.0 <= 9.0.0"
+  }
+}
