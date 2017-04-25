@@ -85,8 +85,8 @@ AssertionGenerator.prototype._installEqualityAssertions = function (expect) {
     const withAllClasses = this.flags['with all classes'];
     const withAllAttributes = this.flags['with all attributes'];
     
-    const actualAdapter = new ActualAdapter();
-    const expectedAdapter = new ExpectedAdapter();
+    const actualAdapter = new ActualAdapter({ includeKeyProp: true });
+    const expectedAdapter = new ExpectedAdapter({ includeKeyProp: true });
     const testHtmlLike = new UnexpectedHtmlLike(actualAdapter);
     if (!exactly) {
       expectedAdapter.setOptions({concatTextContent: true});
@@ -127,8 +127,8 @@ AssertionGenerator.prototype._installEqualityAssertions = function (expect) {
     var withAllClasses = this.flags['with all classes'];
     var withAllAttributes = this.flags['with all attributes'];
     
-    var actualAdapter = new ActualAdapter();
-    var expectedAdapter = new ExpectedAdapter();
+    var actualAdapter = new ActualAdapter({ includeKeyProp: true });
+    var expectedAdapter = new ExpectedAdapter({ includeKeyProp: true });
     var testHtmlLike = new UnexpectedHtmlLike(actualAdapter);
     if (!exactly) {
       actualAdapter.setOptions({concatTextContent: true});
@@ -210,8 +210,8 @@ AssertionGenerator.prototype._installQueriedFor = function (expect) {
     var withAllClasses = this.flags['with all classes'];
     var withAllAttributes = this.flags['with all attributes'];
     
-    var actualAdapter = new ActualAdapter();
-    var queryAdapter = new QueryAdapter();
+    var actualAdapter = new ActualAdapter({ includeKeyProp: true });
+    var queryAdapter = new QueryAdapter({ includeKeyProp: true });
     var testHtmlLike = new UnexpectedHtmlLike(actualAdapter);
     if (!exactly) {
       actualAdapter.setOptions({concatTextContent: true});
@@ -397,8 +397,8 @@ AssertionGenerator.prototype._installWithEventOn = function (expect) {
   
   expect.addAssertion(`<${actualPendingEventTypeName}> on [exactly] [with all children] [with all wrappers] [with all classes] [with all attributes]<${queryTypeName}> <assertion?>`,
     function (expect, subject, target) {
-      const actualAdapter = new ActualAdapter({ convertToString: true, concatTextContent: true });
-      const queryAdapter = new QueryAdapter({ convertToString: true, concatTextContent: true });
+      const actualAdapter = new ActualAdapter({ includeKeyProp: true, convertToString: true, concatTextContent: true });
+      const queryAdapter = new QueryAdapter({ includeKeyProp: true, convertToString: true, concatTextContent: true });
       const testHtmlLike = new UnexpectedHtmlLike(actualAdapter);
       
       const exactly = this.flags.exactly;

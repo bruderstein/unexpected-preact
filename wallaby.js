@@ -6,11 +6,19 @@ module.exports = function (wallaby) {
 
     return {
         files: [
+            {
+              pattern: 'src/tests/fixtures/**/*.js',
+              instrument: false
+            },
+            {
+              pattern: 'src/tests/fixtures/**/*.snapshot',
+              instrument: false
+            },
             'src/**/*.js',
             {
                 pattern: 'src/tests/**/*.spec.js',
                 ignore: true
-            }
+            },
         ],
 
         tests: ['src/tests/**/*.spec.js'],
@@ -21,9 +29,7 @@ module.exports = function (wallaby) {
 
         compilers: {
             'src/**/*.js': wallaby.compilers.babel({
-                babel: Babel,
-                "presets": [ "es2015" ],
-                "plugins": [ ["transform-react-jsx", { "pragma": "h" } ] ]
+                babel: Babel
             }),
             'src/**/*.jsx': wallaby.compilers.babel({
                 babel: Babel,

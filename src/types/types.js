@@ -1,7 +1,7 @@
 
 import { h } from 'preact';
 import UnexpectedHtmlLike from 'unexpected-htmllike';
-// import RawAdapter from 'unexpected-htmllike-raw-adapter';
+import RawAdapter from 'unexpected-htmllike-raw-adapter';
 import PreactElementAdapter from 'unexpected-htmllike-preact-adapter';
 import PreactRenderedAdapter from 'unexpected-htmllike-preactrendered-adapter';
 
@@ -9,11 +9,11 @@ const PreactVNode = Object.getPrototypeOf(h('div'));
 
 function installInto(expect) {
 
-    const preactRenderedAdapter = new PreactRenderedAdapter({ convertToString: true, concatTextContent: true });
+    const preactRenderedAdapter = new PreactRenderedAdapter({ includeKeyProp: true, convertToString: true, concatTextContent: true });
     const htmlLikePreactRendered = UnexpectedHtmlLike(preactRenderedAdapter);
-    // const rawAdapter = new RawAdapter({ convertToString: true, concatTextContent: true });
-    // const htmlLikeRaw = UnexpectedHtmlLike(rawAdapter);
-    const preactAdapter = new PreactElementAdapter();
+    const rawAdapter = new RawAdapter({ convertToString: true, concatTextContent: true });
+    const htmlLikeRaw = UnexpectedHtmlLike(rawAdapter);
+    const preactAdapter = new PreactElementAdapter({ includeKeyProp: true });
     const htmlLikePreactElement = UnexpectedHtmlLike(preactAdapter);
 
     expect.addType({
@@ -64,6 +64,18 @@ function installInto(expect) {
         inspect: function (value, depth, output, inspect) {
             return htmlLikePreactElement.inspect(value, depth, output, inspect);
         }
+    });
+
+    expect.addType({
+      name: 'ReactRawObjectElement',
+      base: 'object',
+      identify: function (value) {
+        return rawAdapter.isRawElement(value);
+      },
+
+      inspect: function (value, depth, output, inspect) {
+        return htmlLikeRaw.inspect(value, depth, output, inspect);
+      }
     });
 }
 

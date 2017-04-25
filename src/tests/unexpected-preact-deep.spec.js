@@ -256,7 +256,7 @@ describe('unexpected-react (deep rendering)', () => {
             component.dispatchEvent(new window.Event('click', { bubbles: true, cancellable: true }));
 
             return expect(component, 'to have rendered',
-                    <div class="bar" data-click-count="1" />
+                    <div class="bar" data-click-count={1} />
             );
         });
 
@@ -293,12 +293,12 @@ describe('unexpected-react (deep rendering)', () => {
                 ), 'to error',
                 'expected\n' +
                 '<CustomComp class="bar" childCount={1}>\n' +
-                '  <div class="bar"><span class="1">1</span></div>\n' +
+                '  <div class="bar"><span key={1} class="1">1</span></div>\n' +
                 '</CustomComp>\n' +
                 'to have rendered <div><span>{expect.it(\'to match\', /[a-z]/)}</span></div>\n' +
                 '\n' +
                 '<div class="bar">\n' +
-                '  <span class="1">\n' +
+                '  <span key={1} class="1">\n' +
                 "    1 // expected '1' to match /[a-z]/\n" +
                 '  </span>\n' +
                 '</div>');
@@ -376,13 +376,15 @@ describe('unexpected-react (deep rendering)', () => {
                 'expected\n' +
                 '<CustomComp class="bar" childCount={3}>\n' +
                 '  <div class="bar">\n' +
-                '    <span class="1">1</span><span class="2">2</span><span class="3">3</span>\n' +
+                '    <span key={1} class="1">1</span>\n' +
+                '    <span key={2} class="2">2</span>\n' +
+                '    <span key={3} class="3">3</span>\n' +
                 '  </div>\n' +
                 '</CustomComp>\n' +
                 'to contain <span class="foo">2</span>\n' +
                 '\n' +
                 'the best match was\n' +
-                '<span class="2" // missing class \'foo\'\n' +
+                '<span key={2} class="2" // missing class \'foo\'\n' +
                 '>\n' +
                 '  2\n' +
                 '</span>');
@@ -398,13 +400,15 @@ describe('unexpected-react (deep rendering)', () => {
                 'expected\n' +
                 '<CustomComp class="bar" childCount={3}>\n' +
                 '  <div class="bar">\n' +
-                '    <span class="1">1</span><span class="2">2</span><span class="3">3</span>\n' +
+                '    <span key={1} class="1">1</span>\n' +
+                '    <span key={2} class="2">2</span>\n' +
+                '    <span key={3} class="3">3</span>\n' +
                 '  </div>\n' +
                 '</CustomComp>\n' +
                 'not to contain <span class="2">2</span>\n' +
                 '\n' +
                 'but found the following match\n' +
-                '<span class="2">2</span>');
+                '<span key={2} class="2">2</span>');
         });
 
         it('returns a rejected promise with the best match when the element is not found with an async expect.it', () => {
@@ -416,13 +420,15 @@ describe('unexpected-react (deep rendering)', () => {
                 'expected\n' +
                 '<CustomComp class="bar" childCount={3}>\n' +
                 '  <div class="bar">\n' +
-                '    <span class="1">1</span><span class="2">2</span><span class="3">3</span>\n' +
+                '    <span key={1} class="1">1</span>\n' +
+                '    <span key={2} class="2">2</span>\n' +
+                '    <span key={3} class="3">3</span>\n' +
                 '  </div>\n' +
                 '</CustomComp>\n' +
                 'to contain <span class={expect.it(\'to eventually have value\', \'foo\')}>2</span>\n' +
                 '\n' +
                 'the best match was\n' +
-                '<span class="2" // expected \'2\' to eventually have value \'foo\'\n' +
+                '<span key={2} class="2" // expected \'2\' to eventually have value \'foo\'\n' +
                 '>\n' +
                 '  2\n' +
                 '</span>');
@@ -435,7 +441,7 @@ describe('unexpected-react (deep rendering)', () => {
         it('finds a rendered component', () => {
 
             const component = renderIntoDocument(<CustomComp class="bar" childCount={3} />);
-            return expect(component, 'queried for', <span class="2" />, 'to have exactly rendered', <span class="2">2</span>);
+            return expect(component, 'queried for', <span class="2" />, 'to have exactly rendered', <span key={2} class="2">2</span>);
         });
 
         it('finds a `contains` query', () => {
@@ -452,7 +458,9 @@ it('errors when the query is not found', () => {
                 'expected\n' +
                 '<CustomComp class="bar" childCount={3}>\n' +
                 '  <div class="bar">\n' +
-                '    <span class="1">1</span><span class="2">2</span><span class="3">3</span>\n' +
+                '    <span key={1} class="1">1</span>\n' +
+                '    <span key={2} class="2">2</span>\n' +
+                '    <span key={3} class="3">3</span>\n' +
                 '  </div>\n' +
                 '</CustomComp>\n' +
                 'queried for <div class="not-exist" /> to contain <span class="2">2</span>\n' +
@@ -460,7 +468,9 @@ it('errors when the query is not found', () => {
                 '`queried for` found no match.  The best match was\n' +
                 '<div class="bar" // missing class \'not-exist\'\n' +
                 '>\n' +
-                '  <span class="1">1</span><span class="2">2</span><span class="3">3</span>\n' +
+                '  <span key={1} class="1">1</span>\n' +
+                '  <span key={2} class="2">2</span>\n' +
+                '  <span key={3} class="3">3</span>\n' +
                 '</div>');
         });
 
@@ -472,12 +482,14 @@ it('errors when the query is not found', () => {
                 'expected\n' +
                 '<CustomComp class="bar" childCount={3}>\n' +
                 '  <div class="bar">\n' +
-                '    <span class="1">1</span><span class="2">2</span><span class="3">3</span>\n' +
+                '    <span key={1} class="1">1</span>\n' +
+                '    <span key={2} class="2">2</span>\n' +
+                '    <span key={3} class="3">3</span>\n' +
                 '  </div>\n' +
                 '</CustomComp>\n' +
                 'queried for <span class="2" /> to have rendered <span class="2">foo</span>\n' +
                 '\n' +
-                '<span class="2">\n' +
+                '<span key={2} class="2">\n' +
                 '  2 // -2\n' +
                 '    // +foo\n' +
                 '</span>');
