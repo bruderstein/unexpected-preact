@@ -1,0 +1,5 @@
+node_modules/
+wallaby.js
+.babelrc
+lib/tests/
+src/tests/
