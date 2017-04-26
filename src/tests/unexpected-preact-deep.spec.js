@@ -1027,4 +1027,16 @@ it('errors when the query is not found', () => {
                 ].join('\n'));
         });
     });
+
+    describe('snapshot assertions', function () {
+      it('`to match snapshot` fails with an error message about using the right require', function () {
+        expect(() => expect(<CustomComp />, 'when rendered', 'to match snapshot'),
+          'to throw', /To use snapshot.*unexpected-preact\/jest/);
+      });
+
+      it('`to satisfy snapshot` fails with an error message about using the right require', function () {
+        expect(() => expect(<CustomComp />, 'when rendered', 'to satisfy snapshot'),
+          'to throw', /To use snapshot.*unexpected-preact\/jest/);
+      });
+    });
 });

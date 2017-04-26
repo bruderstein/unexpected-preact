@@ -17,6 +17,25 @@ module.exports = {
     types.installInto(expect);
     deepAssertions.installInto(expect);
 
+
+    expect.addAssertion([
+      '<RenderedPreactElement> to match snapshot',
+      '<RenderedPreactElementPendingEvent> to match snapshot',
+      '<RenderedPreactElement> to satisfy snapshot',
+      '<RenderedPreactElementPendingEvent> to satisfy snapshot'
+      ],
+      function (expect) {
+        expect.errorMode = 'bubble';
+        expect.fail({
+          message: function (output) {
+            return output.error('To use snapshot assertions in jest, use \'unexpected-preact/jest\' to require or import unexpected-preact');
+          },
+          diff: function (output) {
+            return output.error('To use snapshot assertions in jest, use \'unexpected-preact/jest\' to require or import unexpected-preact');
+          }
+        });
+      }
+    );
   },
 
 };
