@@ -2124,19 +2124,19 @@ unexpected-bluebird@2.9.34-longstack2:
   version "2.9.34-longstack2"
   resolved "http://npm.dev.s-cloud.net/unexpected-bluebird/-/unexpected-bluebird-2.9.34-longstack2.tgz#49acac753b0556ded6025210ee96182307d2b2c9"
 
-unexpected-htmllike-preact-adapter@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unexpected-htmllike-preact-adapter/-/unexpected-htmllike-preact-adapter-1.1.0.tgz#46ba8a5eafa1a5d4e71968db8d01efe0dbc08f08"
+unexpected-htmllike-preact-adapter@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/unexpected-htmllike-preact-adapter/-/unexpected-htmllike-preact-adapter-1.2.0.tgz#1d80d421c6a9e64e9f4f0c9e8cba38c511c492a3"
   dependencies:
     object-assign "^4.1.1"
 
-unexpected-htmllike-preactrendered-adapter@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/unexpected-htmllike-preactrendered-adapter/-/unexpected-htmllike-preactrendered-adapter-1.1.0.tgz#08391299bf26885896b512b8e80c9b04fd1bc721"
+unexpected-htmllike-preactrendered-adapter@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/unexpected-htmllike-preactrendered-adapter/-/unexpected-htmllike-preactrendered-adapter-1.2.0.tgz#61451b9fbe5db5c0708b5f4749a9c4811feff843"
 
-unexpected-htmllike-raw-adapter@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/unexpected-htmllike-raw-adapter/-/unexpected-htmllike-raw-adapter-1.0.0.tgz#7f6d182d1b6d39f67ffddbd0e69ec40b6b26ea98"
+unexpected-htmllike-raw-adapter@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/unexpected-htmllike-raw-adapter/-/unexpected-htmllike-raw-adapter-1.0.1.tgz#d9fc7b8f324ce01102db322923b0cf971bb67420"
   dependencies:
     object-assign "^4.0.1"
 

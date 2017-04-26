@@ -1,7 +1,7 @@
 {
   "name": "unexpected-preact",
   "version": "1.0.0",
-  "description": "",
+  "description": "Assertion library for preact.js - sister project to unexpected-react",
   "main": "lib/unexpected-preact.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register src/**/*.spec.js",
@@ -15,9 +15,9 @@
     "js-writer": "^1.2.0",
     "magicpen-prism": "^2.3.0",
     "unexpected-htmllike": "^2.1.2",
-    "unexpected-htmllike-preact-adapter": "^1.1.0",
-    "unexpected-htmllike-preactrendered-adapter": "^1.1.0",
-    "unexpected-htmllike-raw-adapter": "^1.0.0"
+    "unexpected-htmllike-preact-adapter": "^1.2.0",
+    "unexpected-htmllike-preactrendered-adapter": "^1.2.0",
+    "unexpected-htmllike-raw-adapter": "^1.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
