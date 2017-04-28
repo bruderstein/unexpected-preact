@@ -2124,9 +2124,9 @@ unexpected-bluebird@2.9.34-longstack2:
   version "2.9.34-longstack2"
   resolved "http://npm.dev.s-cloud.net/unexpected-bluebird/-/unexpected-bluebird-2.9.34-longstack2.tgz#49acac753b0556ded6025210ee96182307d2b2c9"
 
-unexpected-htmllike-preact-adapter@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/unexpected-htmllike-preact-adapter/-/unexpected-htmllike-preact-adapter-1.2.0.tgz#1d80d421c6a9e64e9f4f0c9e8cba38c511c492a3"
+unexpected-htmllike-preact-adapter@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/unexpected-htmllike-preact-adapter/-/unexpected-htmllike-preact-adapter-1.2.1.tgz#df3cd7c0074a218c11f90caf6a134a5fa585e6f5"
   dependencies:
     object-assign "^4.1.1"
 

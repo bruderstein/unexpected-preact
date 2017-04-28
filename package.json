@@ -8,14 +8,20 @@
     "build": "babel src -d lib --source-maps",
     "prepublish": "npm run build"
   },
-  "keywords": ["preact", "preact.js", "testing", "unit test", "assertion"],
+  "keywords": [
+    "preact",
+    "preact.js",
+    "testing",
+    "unit test",
+    "assertion"
+  ],
   "author": "Dave Brotherstone",
   "license": "MIT",
   "dependencies": {
     "js-writer": "^1.2.0",
     "magicpen-prism": "^2.3.0",
     "unexpected-htmllike": "^2.1.2",
-    "unexpected-htmllike-preact-adapter": "^1.2.0",
+    "unexpected-htmllike-preact-adapter": "^1.2.1",
     "unexpected-htmllike-preactrendered-adapter": "^1.2.0",
     "unexpected-htmllike-raw-adapter": "^1.0.1"
   },
