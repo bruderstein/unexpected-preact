@@ -26,7 +26,10 @@ function installInto(expect) {
                 value !== null &&
                 (typeof value._component === 'object' ||
                  typeof value.__preact_attr_ === 'object' ||
-                 typeof value.__preact_attr === 'object');
+                 (value.base &&                         // Following for component instance returned from preact-compat render
+                  value.hasOwnProperty('props') &&
+                  value.hasOwnProperty('context') &&
+                  typeof value.setState === 'function'));
         },
 
         inspect(value, depth, output, inspect) {
