@@ -21,8 +21,8 @@
     "js-writer": "^1.2.0",
     "magicpen-prism": "^2.3.0",
     "unexpected-htmllike": "^2.1.2",
-    "unexpected-htmllike-preact-adapter": "^1.2.1",
-    "unexpected-htmllike-preactrendered-adapter": "^1.2.0",
+    "unexpected-htmllike-preact-adapter": "^1.2.2",
+    "unexpected-htmllike-preactrendered-adapter": "^1.2.3",
     "unexpected-htmllike-raw-adapter": "^1.0.1"
   },
   "devDependencies": {
