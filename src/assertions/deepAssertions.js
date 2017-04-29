@@ -141,6 +141,9 @@ function installInto(expect) {
       if (result.type === PreactRenderedAdapter.NODE_TYPE) {
         return result.node;
       }
+      if (result._component) {
+        return result._component;
+      }
       return result;
     },
     triggerEvent: triggerEvent.bind(null, expect),
