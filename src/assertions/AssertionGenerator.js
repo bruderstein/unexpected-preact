@@ -245,7 +245,7 @@ AssertionGenerator.prototype._installQueriedFor = function (expect) {
       
       if (args.length > 3) {
         // There is an assertion continuation...
-        expect.errorMode = 'nested'
+        expect.errorMode = 'nested';
         const s = rewrapResult(subject, result.bestMatch.target || result.bestMatchItem);
         return expect.apply(null,
           [
@@ -312,7 +312,7 @@ AssertionGenerator.prototype._installWithEvent = function (expect) {
       });
     } else {
       triggerEvent(subject, null, eventName, args);
-      return expect.shift(subject);
+      return expect.shift(wrapResultForReturn(subject));
     }
   });
   
@@ -361,7 +361,7 @@ AssertionGenerator.prototype._installWithEvent = function (expect) {
         });
       } else {
         triggerEvent(subject.renderer, null, eventName);
-        return expect.shift(subject.renderer);
+        return expect.shift(wrapResultForReturn(subject.renderer));
       }
     });
   
@@ -378,7 +378,7 @@ AssertionGenerator.prototype._installWithEvent = function (expect) {
         });
       } else {
         triggerEvent(subject.renderer, null, eventName, eventArgs);
-        return expect.shift(subject.renderer);
+        return expect.shift(wrapResultForReturn(subject.renderer));
       }
     });
   
@@ -390,6 +390,7 @@ AssertionGenerator.prototype._installWithEventOn = function (expect) {
     actualTypeName, queryTypeName, expectedTypeName,
     getRenderOutput,
     getDiffInputFromRenderOutput, triggerEvent,
+    wrapResultForReturn,
     ActualAdapter, QueryAdapter
   } = this._options;
   
@@ -409,7 +410,6 @@ AssertionGenerator.prototype._installWithEventOn = function (expect) {
       
       const options = getDefaultOptions({ exactly, withAllWrappers, withAllChildren, withAllClasses, withAllAttributes});
       options.findTargetAttrib = 'eventTarget';
-      
       const containsResult = testHtmlLike.contains(queryAdapter, getDiffInputFromRenderOutput(getRenderOutput(subject.renderer)), target, expect, options);
       return testHtmlLike.withResult(containsResult, result => {
         if (!result.found) {
@@ -432,7 +432,7 @@ AssertionGenerator.prototype._installWithEventOn = function (expect) {
           return expect.shift(newSubject);
         } else {
           triggerEvent(newSubject.renderer, newSubject.target, newSubject.eventName, newSubject.eventArgs);
-          return expect.shift(newSubject.renderer);
+          return expect.shift(wrapResultForReturn(newSubject.renderer));
         }
       });
     });
