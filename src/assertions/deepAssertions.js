@@ -87,6 +87,11 @@ const eventConstructorMap = {
 
 function triggerEvent(expect, component, target, eventName, eventArgs) {
   let targetDOM = component;
+
+  if (targetDOM.hasOwnProperty('props') && targetDOM.hasOwnProperty('context') && typeof targetDOM.setState === 'function') {
+    // This is an instance of a component from preact-compat
+    targetDOM = targetDOM.base;
+  }
   if (target) {
     targetDOM = target.node;
   }
