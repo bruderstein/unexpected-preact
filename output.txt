@@ -1,0 +1,1539 @@
+
+> unexpected-preact@2.0.0 generate-site /Users/davebrotherstone/work/personal/unexpected-preact
+> generate-site --require ./bootstrap-documentation-generation.js
+
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: 
+   [ VNode {
+       nodeName: 'div',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'span',
+  children: [ 'Buy groceries' ],
+  attributes: { className: 'label' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+queried for <TodoItem id={3}><div><span queryTarget={true} class="label" /></div></TodoItem>, 'to have rendered', <span class="label">Buy groceries</span>
+  The assertion does not have a matching signature for:
+    <PreactElement> queried for <PreactElement> <string> <PreactElement>
+  did you mean:
+    <RenderedPreactElement> queried for [exactly] <PreactElement> <assertion?>
+    <RenderedPreactElement> queried for [with all children] [with all wrapppers] [with all classes] [with all attributes] <PreactElement> <assertion?>
+    <RenderedPreactElementPendingEvent> queried for [exactly] <PreactElement> <assertion?>
+    <RenderedPreactElementPendingEvent> queried for [with all children] [with all wrappers] [with all classes] [with all attributes] <PreactElement> <assertion?>
+    <RenderedPreactElementWrapper> queried for [exactly] <PreactElement> <assertion?>
+    <RenderedPreactElementWrapper> queried for [with all children] [with all wrapppers] [with all classes] [with all attributes] <PreactElement> <assertion?>
+
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at Array.forEach (native)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: 
+   [ VNode {
+       nodeName: 'div',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'span',
+  children: [ 'Buy groceries' ],
+  attributes: { className: 'label' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+queried for <TodoItem id={3}><div><span queryTarget={true} class="label" /></div></TodoItem>, 'to have rendered', <span class="label">Buy groceries</span>
+  The assertion does not have a matching signature for:
+    <PreactElement> queried for <PreactElement> <string> <PreactElement>
+  did you mean:
+    <RenderedPreactElement> queried for [exactly] <PreactElement> <assertion?>
+    <RenderedPreactElement> queried for [with all children] [with all wrapppers] [with all classes] [with all attributes] <PreactElement> <assertion?>
+    <RenderedPreactElementPendingEvent> queried for [exactly] <PreactElement> <assertion?>
+    <RenderedPreactElementPendingEvent> queried for [with all children] [with all wrappers] [with all classes] [with all attributes] <PreactElement> <assertion?>
+    <RenderedPreactElementWrapper> queried for [exactly] <PreactElement> <assertion?>
+    <RenderedPreactElementWrapper> queried for [with all children] [with all wrapppers] [with all classes] [with all attributes] <PreactElement> <assertion?>
+
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at Array.forEach (native)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: 
+   [ VNode {
+       nodeName: 'div',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'span',
+  children: [ 'Buy groceries' ],
+  attributes: { className: 'label' },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'span',
+  children: [ 'two' ],
+  attributes: undefined,
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent /> when rendered to contain exactly <span>two</span>
+
+the best match was
+<span class="middle" // class should be removed
+>
+  two
+</span>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:3:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'span',
+  children: [ 'two' ],
+  attributes: undefined,
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent /> when rendered to contain exactly <span>two</span>
+
+the best match was
+<span class="middle" // class should be removed
+>
+  two
+</span>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:3:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'span',
+  children: [ 'two' ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent />
+when rendered to have rendered <div id="main"><span>one</span><span>four</span></div>
+
+<div id="main" class="parent">
+  <span>one</span>
+  <span>
+    two // -two
+        // +four
+  </span>
+  <span>three</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:2:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent />
+when rendered to have rendered <div id="main"><span>one</span><span>four</span></div>
+
+<div id="main" class="parent">
+  <span>one</span>
+  <span>
+    two // -two
+        // +four
+  </span>
+  <span>three</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:2:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent />
+when rendered to have rendered with all children <div id="main"><span>one</span><span>three</span></div>
+
+<div id="main" class="parent">
+  <span>one</span>
+  <span>two</span> // should be removed
+  <span>three</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:5:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent />
+when rendered to have rendered with all children <div id="main"><span>one</span><span>three</span></div>
+
+<div id="main" class="parent">
+  <span>one</span>
+  <span>two</span> // should be removed
+  <span>three</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:5:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent />
+when rendered to have exactly rendered <div id="main"><span>one</span><span>three</span></div>
+
+<div id="main" class="parent" // class should be removed
+>
+  <span>one</span>
+  <span>two</span> // should be removed
+  <span>three</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:5:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected <MyComponent />
+when rendered to have exactly rendered <div id="main"><span>one</span><span>three</span></div>
+
+<div id="main" class="parent" // class should be removed
+>
+  <span>one</span>
+  <span>two</span> // should be removed
+  <span>three</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:5:1
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: MyComponent],
+  children: [],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined },
+     VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: undefined,
+       key: undefined } ],
+  attributes: { id: 'main' },
+  key: undefined }
+get Error Message ReferenceError: React is not defined
+    at evalmachine.<anonymous>:36:3
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at Object.async.forEachOfSeries.async.eachOfSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:279:9)
+    at Object.async.forEachSeries.async.eachSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:215:22)
+    at module.exports (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:84:11)
+    at Object.module.exports.fromMarkdown (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/Snippets.js:44:9)
+    at UnexpectedMarkdown.getSnippets (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:97:18)
+    at UnexpectedMarkdown.toHtml (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:59:10)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:253:42
+    at nextTask (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5210:14)
+    at Object.waterfall (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5213:5)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:250:31
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3816:26
+    at replenish (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:982:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:986:9
+    at eachOfLimit (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1011:22)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1016:16
+    at _parallel (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3815:5)
+get Error Message ReferenceError: React is not defined
+    at evalmachine.<anonymous>:36:3
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at Object.async.forEachOfSeries.async.eachOfSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:279:9)
+    at Object.async.forEachSeries.async.eachSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:215:22)
+    at module.exports (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:84:11)
+    at Object.module.exports.fromMarkdown (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/Snippets.js:44:9)
+    at UnexpectedMarkdown.getSnippets (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:97:18)
+    at UnexpectedMarkdown.toHtml (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:59:10)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:253:42
+    at nextTask (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5210:14)
+    at Object.waterfall (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5213:5)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:250:31
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3816:26
+    at replenish (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:982:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:986:9
+    at eachOfLimit (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1011:22)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1016:16
+    at _parallel (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3815:5)
+get Error Message ReferenceError: React is not defined
+    at evalmachine.<anonymous>:36:3
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at Object.async.forEachOfSeries.async.eachOfSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:279:9)
+    at Object.async.forEachSeries.async.eachSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:215:22)
+    at module.exports (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:84:11)
+    at Object.module.exports.fromMarkdown (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/Snippets.js:44:9)
+    at UnexpectedMarkdown.getSnippets (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:97:18)
+    at UnexpectedMarkdown.toHtml (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:59:10)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:253:42
+    at nextTask (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5210:14)
+    at Object.waterfall (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5213:5)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:250:31
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3816:26
+    at replenish (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:982:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:986:9
+    at eachOfLimit (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1011:22)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1016:16
+    at _parallel (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3815:5)
+get Error Message ReferenceError: React is not defined
+    at evalmachine.<anonymous>:36:3
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at Object.async.forEachOfSeries.async.eachOfSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:279:9)
+    at Object.async.forEachSeries.async.eachSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:215:22)
+    at module.exports (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:84:11)
+    at Object.module.exports.fromMarkdown (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/Snippets.js:44:9)
+    at UnexpectedMarkdown.getSnippets (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:97:18)
+    at UnexpectedMarkdown.toHtml (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:59:10)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:253:42
+    at nextTask (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5210:14)
+    at Object.waterfall (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5213:5)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:250:31
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3816:26
+    at replenish (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:982:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:986:9
+    at eachOfLimit (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1011:22)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1016:16
+    at _parallel (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3815:5)
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'completed' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers for the wife" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+when rendered with event mouseDown { clientX: 150, clientY: 50 }, 'on', <TodoItem id={3} />, 'to contain', <div class="completed"><span class="label">Buy groceries</span></div>
+
+the best match was
+<div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+   class="item incomplete" // missing class 'completed'
+>
+  <span class="id">3</span>
+  <span class="label">Buy groceries</span>
+  <span>Todo</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'completed' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers for the wife" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+when rendered with event mouseDown { clientX: 150, clientY: 50 }, 'on', <TodoItem id={3} />, 'to contain', <div class="completed"><span class="label">Buy groceries</span></div>
+
+the best match was
+<div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+   class="item incomplete" // missing class 'completed'
+>
+  <span class="id">3</span>
+  <span class="label">Buy groceries</span>
+  <span>Todo</span>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: 'span',
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'completed' },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 2 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'items' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers for the wife" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+when rendered
+with event 'click', { clientX: 150, clientY: 50 } on <TodoItem id={3} /> with event 'click', { clientX: 50, clientY: 50 } on <TodoItem id={2} /> to have rendered <div class="items">
+  <TodoItem id={2}><div class="completed" /></TodoItem>
+  <TodoItem id={3}><div class="completed" /></TodoItem>
+</div>
+
+<div // missing class="items"
+>
+  <div // should be <TodoItem
+     class="items" // missing id={2}
+  >
+    <TodoItem id={1} label="Buy flowers for the wife"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={1}>
+      <div id="todo-1" onClick={function bound onClick() { /* native code */ }}
+         class="item incomplete">
+        <span class="id">1</span>
+        <span class="label">Buy flowers for the wife</span>
+        <span>Todo</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={2} label="Mow the lawn"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={2}>
+      <div id="todo-2" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">2</span>
+        <span class="label">Mow the lawn</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={3} label="Buy groceries"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={3}>
+      <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">3</span>
+        <span class="label">Buy groceries</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+  </div>
+  <div // should be <TodoItem
+     class="add-new-item" // missing id={3}
+  >
+    <input placeholder="Enter something to do">
+      // missing <div class="completed" />
+    </input>
+  </div>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 2 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'items' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers for the wife" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+when rendered
+with event 'click', { clientX: 150, clientY: 50 } on <TodoItem id={3} /> with event 'click', { clientX: 50, clientY: 50 } on <TodoItem id={2} /> to have rendered <div class="items">
+  <TodoItem id={2}><div class="completed" /></TodoItem>
+  <TodoItem id={3}><div class="completed" /></TodoItem>
+</div>
+
+<div // missing class="items"
+>
+  <div // should be <TodoItem
+     class="items" // missing id={2}
+  >
+    <TodoItem id={1} label="Buy flowers for the wife"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={1}>
+      <div id="todo-1" onClick={function bound onClick() { /* native code */ }}
+         class="item incomplete">
+        <span class="id">1</span>
+        <span class="label">Buy flowers for the wife</span>
+        <span>Todo</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={2} label="Mow the lawn"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={2}>
+      <div id="todo-2" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">2</span>
+        <span class="label">Mow the lawn</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={3} label="Buy groceries"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={3}>
+      <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">3</span>
+        <span class="label">Buy groceries</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+  </div>
+  <div // should be <TodoItem
+     class="add-new-item" // missing id={3}
+  >
+    <input placeholder="Enter something to do">
+      // missing <div class="completed" />
+    </input>
+  </div>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 2 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'items' },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 2 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'items' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers for the wife" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+when rendered
+with event 'click', { clientX: 150, clientY: 50 } on <TodoItem id={3} /> and with event 'click', { clientX: 50, clientY: 50 } on <TodoItem id={2} /> to have rendered <div class="items">
+  <TodoItem id={2}><div class="completed" /></TodoItem>
+  <TodoItem id={3}><div class="completed" /></TodoItem>
+</div>
+
+<div // missing class="items"
+>
+  <div // should be <TodoItem
+     class="items" // missing id={2}
+  >
+    <TodoItem id={1} label="Buy flowers for the wife"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={1}>
+      <div id="todo-1" onClick={function bound onClick() { /* native code */ }}
+         class="item incomplete">
+        <span class="id">1</span>
+        <span class="label">Buy flowers for the wife</span>
+        <span>Todo</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={2} label="Mow the lawn"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={2}>
+      <div id="todo-2" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">2</span>
+        <span class="label">Mow the lawn</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={3} label="Buy groceries"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={3}>
+      <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">3</span>
+        <span class="label">Buy groceries</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+  </div>
+  <div // should be <TodoItem
+     class="add-new-item" // missing id={3}
+  >
+    <input placeholder="Enter something to do">
+      // missing <div class="completed" />
+    </input>
+  </div>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 2 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'items' },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <TodoItem id={1} label="Buy flowers for the wife" />
+  <TodoItem id={2} label="Mow the lawn" />
+  <TodoItem id={3} label="Buy groceries" />
+</TodoList>
+when rendered
+with event 'click', { clientX: 150, clientY: 50 } on <TodoItem id={3} /> and with event 'click', { clientX: 50, clientY: 50 } on <TodoItem id={2} /> to have rendered <div class="items">
+  <TodoItem id={2}><div class="completed" /></TodoItem>
+  <TodoItem id={3}><div class="completed" /></TodoItem>
+</div>
+
+<div // missing class="items"
+>
+  <div // should be <TodoItem
+     class="items" // missing id={2}
+  >
+    <TodoItem id={1} label="Buy flowers for the wife"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={1}>
+      <div id="todo-1" onClick={function bound onClick() { /* native code */ }}
+         class="item incomplete">
+        <span class="id">1</span>
+        <span class="label">Buy flowers for the wife</span>
+        <span>Todo</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={2} label="Mow the lawn"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={2}>
+      <div id="todo-2" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">2</span>
+        <span class="label">Mow the lawn</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+    <TodoItem id={3} label="Buy groceries"
+       onClick={function bound bound onClick() { /* native code */ }}
+       clicked={false} onMouseDown={function noop() {}} key={3}>
+      <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+         class="item completed">
+        <span class="id">3</span>
+        <span class="label">Buy groceries</span>
+        <span>Completed!</span>
+      </div>
+    </TodoItem>
+  </div>
+  <div // should be <TodoItem
+     class="add-new-item" // missing id={3}
+  >
+    <input placeholder="Enter something to do">
+      // missing <div class="completed" />
+    </input>
+  </div>
+</div>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/deepAssertions.js:164:21)
+    at evalmachine.<anonymous>:1:-61
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoList],
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: undefined,
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 3 },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: [],
+  attributes: { id: 2 },
+  key: undefined }
+inspecting VNode {
+  nodeName: 'div',
+  children: 
+   [ VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined },
+     VNode {
+       nodeName: [Function: TodoItem],
+       children: [Object],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { className: 'items' },
+  key: undefined }
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: 
+   [ VNode {
+       nodeName: 'div',
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { id: 3 },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <div>
+    <div class="items">
+      <TodoItem id={1} label="Buy flowers for the wife"
+         onClick={function bound bound onClick() { /* native code */ }}
+         clicked={false} onMouseDown={function noop() {}} key={1}>
+        <div id="todo-1" onClick={function bound onClick() { /* native code */ }}
+           class="item incomplete">
+          <span class="id">1</span>
+          <span class="label">Buy flowers for the wife</span>
+          <span>Todo</span>
+        </div>
+      </TodoItem>
+      <TodoItem id={2} label="Mow the lawn"
+         onClick={function bound bound onClick() { /* native code */ }}
+         clicked={false} onMouseDown={function noop() {}} key={2}>
+        <div id="todo-2" onClick={function bound onClick() { /* native code */ }}
+           class="item incomplete">
+          <span class="id">2</span>
+          <span class="label">Mow the lawn</span>
+          <span>Todo</span>
+        </div>
+      </TodoItem>
+      <TodoItem id={3} label="Buy groceries"
+         onClick={function bound bound onClick() { /* native code */ }}
+         clicked={false} onMouseDown={function noop() {}} key={3}>
+        <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+           class="item incomplete">
+          <span class="id">3</span>
+          <span class="label">Buy groceries</span>
+          <span>Todo</span>
+        </div>
+      </TodoItem>
+    </div>
+    <div class="add-new-item"><input placeholder="Enter something to do" /></div>
+  </div>
+</TodoList>
+to contain <TodoItem id={3}><div class="completed" /></TodoItem>
+
+the best match was
+<TodoItem id={3} label="Buy groceries"
+   onClick={function bound bound onClick() { /* native code */ }}
+   clicked={false} onMouseDown={function noop() {}} key={3}>
+  <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+     class="item incomplete" // missing class 'completed'
+  >
+    <span class="id">3</span>
+    <span class="label">Buy groceries</span>
+    <span>Todo</span>
+  </div>
+</TodoItem>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/AssertionGenerator.js:117:12)
+    at evalmachine.<anonymous>:3:5
+    at Array.forEach (native)
+    at runCallback (timers.js:566:20)
+    at tryOnImmediate (timers.js:546:5)
+    at processImmediate [as _immediateCallback] (timers.js:525:5)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: 
+   [ VNode {
+       nodeName: 'div',
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { id: 3 },
+  key: undefined }
+get Error Message UnexpectedError: 
+expected
+<TodoList>
+  <div>
+    <div class="items">
+      <TodoItem id={1} label="Buy flowers for the wife"
+         onClick={function bound bound onClick() { /* native code */ }}
+         clicked={false} onMouseDown={function noop() {}} key={1}>
+        <div id="todo-1" onClick={function bound onClick() { /* native code */ }}
+           class="item incomplete">
+          <span class="id">1</span>
+          <span class="label">Buy flowers for the wife</span>
+          <span>Todo</span>
+        </div>
+      </TodoItem>
+      <TodoItem id={2} label="Mow the lawn"
+         onClick={function bound bound onClick() { /* native code */ }}
+         clicked={false} onMouseDown={function noop() {}} key={2}>
+        <div id="todo-2" onClick={function bound onClick() { /* native code */ }}
+           class="item incomplete">
+          <span class="id">2</span>
+          <span class="label">Mow the lawn</span>
+          <span>Todo</span>
+        </div>
+      </TodoItem>
+      <TodoItem id={3} label="Buy groceries"
+         onClick={function bound bound onClick() { /* native code */ }}
+         clicked={false} onMouseDown={function noop() {}} key={3}>
+        <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+           class="item incomplete">
+          <span class="id">3</span>
+          <span class="label">Buy groceries</span>
+          <span>Todo</span>
+        </div>
+      </TodoItem>
+    </div>
+    <div class="add-new-item"><input placeholder="Enter something to do" /></div>
+  </div>
+</TodoList>
+to contain <TodoItem id={3}><div class="completed" /></TodoItem>
+
+the best match was
+<TodoItem id={3} label="Buy groceries"
+   onClick={function bound bound onClick() { /* native code */ }}
+   clicked={false} onMouseDown={function noop() {}} key={3}>
+  <div id="todo-3" onClick={function bound onClick() { /* native code */ }}
+     class="item incomplete" // missing class 'completed'
+  >
+    <span class="id">3</span>
+    <span class="label">Buy groceries</span>
+    <span>Todo</span>
+  </div>
+</TodoItem>
+
+    at Function.<anonymous> (/Users/davebrotherstone/work/personal/unexpected-preact/src/assertions/AssertionGenerator.js:117:12)
+    at evalmachine.<anonymous>:3:5
+    at Array.forEach (native)
+    at runCallback (timers.js:566:20)
+    at tryOnImmediate (timers.js:546:5)
+    at processImmediate [as _immediateCallback] (timers.js:525:5)
+    set the query parameter full-trace=true to see the full stack trace
+inspecting VNode {
+  nodeName: [Function: TodoItem],
+  children: 
+   [ VNode {
+       nodeName: 'div',
+       children: [],
+       attributes: [Object],
+       key: undefined } ],
+  attributes: { id: 3 },
+  key: undefined }
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:2:29
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at Object.async.forEachOfSeries.async.eachOfSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:279:9)
+    at Object.async.forEachSeries.async.eachSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:215:22)
+    at module.exports (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:84:11)
+    at Object.module.exports.fromMarkdown (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/Snippets.js:44:9)
+    at UnexpectedMarkdown.getSnippets (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:97:18)
+    at UnexpectedMarkdown.toHtml (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:59:10)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:253:42
+    at nextTask (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5210:14)
+    at Object.waterfall (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5213:5)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:250:31
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3816:26
+    at replenish (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:982:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:986:9
+    at eachOfLimit (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1011:22)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1016:16
+    at _parallel (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3815:5)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:2:29
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at Object.async.forEachOfSeries.async.eachOfSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:279:9)
+    at Object.async.forEachSeries.async.eachSeries (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:215:22)
+    at module.exports (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:84:11)
+    at Object.module.exports.fromMarkdown (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/Snippets.js:44:9)
+    at UnexpectedMarkdown.getSnippets (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:97:18)
+    at UnexpectedMarkdown.toHtml (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/UnexpectedMarkdown.js:59:10)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:253:42
+    at nextTask (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5210:14)
+    at Object.waterfall (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:5213:5)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/metalsmith-unexpected-markdown/lib/metalsmith-unexpected-markdown.js:250:31
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3816:26
+    at replenish (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:982:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:986:9
+    at eachOfLimit (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1011:22)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:1016:16
+    at _parallel (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/async/dist/async.js:3815:5)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:1:-33
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:1:-33
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:1:-33
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:1:-33
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:108:24
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:2:31
+    at evalmachine.<anonymous>:11:3
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:92:38
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+get Error Message ReferenceError: items is not defined
+    at evalmachine.<anonymous>:2:31
+    at evalmachine.<anonymous>:11:3
+    at ContextifyScript.Script.runInThisContext (vm.js:25:33)
+    at Object.exports.runInThisContext (vm.js:77:17)
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/lib/evaluateSnippets.js:92:38
+    at /Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:182:20
+    at iterate (/Users/davebrotherstone/work/personal/unexpected-preact/node_modules/unexpected-markdown/node_modules/async/lib/async.js:260:13)
+    at _combinedTickCallback (internal/process/next_tick.js:67:7)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+wrote site to site-build

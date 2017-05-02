@@ -1,0 +1,34 @@
+[
+  {
+    "label": "to render as (PreactElement)",
+    "url": "/assertions/PreactElement/to-render-as/"
+  },
+  {
+    "label": "when rendered (PreactElement)",
+    "url": "/assertions/PreactElement/when-rendered/"
+  },
+  {
+    "label": "queried for (RenderedPreactElement)",
+    "url": "/assertions/RenderedPreactElement/queried-for/"
+  },
+  {
+    "label": "to contain (RenderedPreactElement)",
+    "url": "/assertions/RenderedPreactElement/to-contain/"
+  },
+  {
+    "label": "to have rendered (RenderedPreactElement)",
+    "url": "/assertions/RenderedPreactElement/to-have-rendered/"
+  },
+  {
+    "label": "to match snapshot (RenderedPreactElement)",
+    "url": "/assertions/RenderedPreactElement/to-match-snapshot/"
+  },
+  {
+    "label": "to satisfy snapshot (RenderedPreactElement)",
+    "url": "/assertions/RenderedPreactElement/to-satisfy-snapshot/"
+  },
+  {
+    "label": "with event (RenderedPreactElement)",
+    "url": "/assertions/RenderedPreactElement/with-event/"
+  }
+]
