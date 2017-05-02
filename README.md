@@ -41,5 +41,6 @@ it('increases the count on click', function () {
 ```
 
 
-Full docs are being written, but for now see the [unexpected-react docs](http://bruderstein.github.io/unexpected-react/assertions/RenderedReactElement/)
-as the assertions are all the same. Only deep (DOM) rendering is possible with preact, but you still get the full virtual tree as you see in the react-devtools, with all HTML elements and custom components. 
+Read the [full documentation for the assertions](http://bruderstein.github.io/unexpected-preact/)
+
+Only deep (DOM) rendering is possible with preact, but you still get the full virtual tree as you see in the react-devtools, with all HTML elements and custom components. 
