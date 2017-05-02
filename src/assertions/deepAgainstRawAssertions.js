@@ -51,10 +51,6 @@ function installInto(expect) {
   const assertionGenerator = new AssertionGenerator(getOptions(expect));
   assertionGenerator.installInto(expect);
   
-  expect.addAssertion('<ReactModule> to have been injected', function (expect) {
-    checkAttached(expect);
-  });
-  
   return assertionGenerator;
 }
 
