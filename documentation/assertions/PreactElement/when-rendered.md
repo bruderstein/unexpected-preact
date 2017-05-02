@@ -30,7 +30,7 @@ expect(<Pages count={3} />,
 );
 ```
 
-You can optionally use `'when deeploy rendered'` which for Preact is identical, but maintains compatibility with unexpected-react. 
+You can optionally use `'when deeply rendered'` which for Preact is identical, but maintains compatibility with unexpected-react. 
 If you would like to be able to switch to React and keep the same tests, it is advisable to use `'when deeply rendered'`
 
 Everything works after the `when rendered` as normal, so you can trigger events and use the other assertions as you would otherwise.
