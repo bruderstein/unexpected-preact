@@ -179,6 +179,8 @@ if (typeof document === 'undefined') {
             global[key] = global.window[key];
         }
     }
+    global.Node = global.window.Node;
+    global.Text = global.window.Text;
 }
 ```
 
@@ -204,7 +206,7 @@ if (typeof document === 'undefined') {
 
 # Preact Compatibility
 
-unexpected-preact is integration tested with preact version 7 and 8, but it is expected to work with versions as early as 4.
+unexpected-preact is tested with preact version 7 and 8, but has also been tested to work with version 6.
 
 # Contributing
 
