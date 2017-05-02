@@ -7,7 +7,8 @@
     "test": "mocha --compilers js:babel-register src/**/*.spec.js",
     "build": "babel src -d lib --source-maps",
     "prepublish": "npm run build",
-    "generate-site": "generate-site --require ./bootstrap-documentation-generation.js"
+    "generate-site": "generate-site --require ./bootstrap-documentation-generation.js",
+    "deploy-site": "deploy-site.sh"
   },
   "keywords": [
     "preact",
