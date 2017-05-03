@@ -1,3 +1,6 @@
 node_modules/
 lib/
 site-build/
+jest-integration/build/
+jest-integration/output/
+jest-integration/baseTemplate/yarn.lock

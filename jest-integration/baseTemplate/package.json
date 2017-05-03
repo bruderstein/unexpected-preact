@@ -1,0 +1,17 @@
+{
+  "name": "unexpected-preact-jest-integration-tests",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "preact": "8.x.x",
+    "preact-compat": "^3.16.0"
+  },
+  "devDependencies": {
+    "jest": "*",
+    "unexpected": "^10.22.2"
+  },
+  "scripts": {
+    "test": "jest --json --outputFile testRunOutput.json",
+    "test-update": "jest --json --outputFile testRunOutput.json -u"
+  }
+}
