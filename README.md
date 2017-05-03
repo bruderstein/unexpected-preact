@@ -57,3 +57,15 @@ A: Just define a global SVGElement function before you use Preact to render some
 ```js
 if (!window.SVGElement) window.SVGElement = function () {};
 ```
+
+### Status
+
+Whilst this should be considered beta, it is based on unexpected-react and the supporting libraries, which have been used for 
+production tests for well over a year in many large projects.  We've also got a very comprehensive test suite and integration
+test suite, so if something were fundamentally broken we'd know quickly.
+
+This library is maintained, and welcomes PRs and issues - please raise an issue if you have questions!
+
+### License
+MIT
+
