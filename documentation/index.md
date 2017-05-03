@@ -206,7 +206,7 @@ if (typeof document === 'undefined') {
 
 # Preact Compatibility
 
-unexpected-preact is tested with preact version 7 and 8, but has also been tested to work with version 6.
+unexpected-preact is integration tested with preact version 6, 7 and 8.
 
 # Contributing
 

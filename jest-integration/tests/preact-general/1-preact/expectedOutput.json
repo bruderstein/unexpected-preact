@@ -1,0 +1,156 @@
+{
+  "numFailedTestSuites": 1,
+  "numFailedTests": 10,
+  "numPassedTestSuites": 0,
+  "numPassedTests": 10,
+  "numPendingTestSuites": 0,
+  "numPendingTests": 0,
+  "numRuntimeErrorTestSuites": 0,
+  "numTotalTestSuites": 1,
+  "numTotalTests": 20,
+  "snapshot": {
+    "added": 0,
+    "failure": false,
+    "filesAdded": 0,
+    "filesRemoved": 0,
+    "filesUnmatched": 0,
+    "filesUpdated": 0,
+    "matched": 0,
+    "total": 0,
+    "unchecked": 0,
+    "unmatched": 0,
+    "updated": 0
+  },
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "all pass"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <ClickerDisplay /> to render as\n<div>\n  <StatelessWrapper msg=\"Clicked 0\"><span class=\"foo\">Clicked 0</span></StatelessWrapper>\n</div>\n\n<div onClick={function bound onClick() { /* native code */ }}\n   onMouseDown={function bound onMouseDown() { /* native code */ }}\n   class=\"multiple foo\">\n  <StatelessWrapper msg=\"Clicked 0\" id=\"foo\">\n    <Stateless msg=\"Clicked 0\">\n      <span class=\"stateless\" // missing class 'foo'\n      >\n        Clicked 0\n      </span>\n    </Stateless>\n  </StatelessWrapper>\n</div>\n"
+          ],
+          "status": "failed",
+          "title": "class fail"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <ClickerDisplay />\nto render as <div><span class=\"foo\">Clicked 0</span></div>\n\n<div onClick={function bound onClick() { /* native code */ }}\n   onMouseDown={function bound onMouseDown() { /* native code */ }}\n   class=\"multiple foo\">\n  <StatelessWrapper msg=\"Clicked 0\" id=\"foo\">\n    <Stateless msg=\"Clicked 0\">\n      <span class=\"stateless\" // missing class 'foo'\n      >\n        Clicked 0\n      </span>\n    </Stateless>\n  </StatelessWrapper>\n</div>\n"
+          ],
+          "status": "failed",
+          "title": "class fail with wrapper"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <ClickerDisplay />\nto render as <div><StatelessWrapper msg=\"Clicked 0\"><span>foo</span></StatelessWrapper></div>\n\n<div onClick={function bound onClick() { /* native code */ }}\n   onMouseDown={function bound onMouseDown() { /* native code */ }}\n   class=\"multiple foo\">\n  <StatelessWrapper msg=\"Clicked 0\" id=\"foo\">\n    <Stateless msg=\"Clicked 0\">\n      <span class=\"stateless\">\n        Clicked 0 // -Clicked 0\n                  // +foo\n      </span>\n    </Stateless>\n  </StatelessWrapper>\n</div>\n"
+          ],
+          "status": "failed",
+          "title": "content fail"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "finds a custom component"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <Multiple />\nwhen rendered with event 'mouseDown', { clientX: 5 } on <ClickerDisplay class=\"two\" /> queried for <ClickerDisplay class=\"two\" /> to have rendered <span>Clicked 3 not</span>\n\n<ClickerDisplay class=\"two\">\n  <div onClick={function bound onClick() { /* native code */ }}\n     onMouseDown={function bound onMouseDown() { /* native code */ }}\n     class=\"multiple foo\">\n    <StatelessWrapper msg=\"Clicked 5\" id=\"foo\">\n      <Stateless msg=\"Clicked 5\">\n        <span class=\"stateless\">\n          Clicked 5 // -Clicked 5\n                    // +Clicked 3 not\n        </span>\n      </Stateless>\n    </StatelessWrapper>\n  </div>\n</ClickerDisplay>\n"
+          ],
+          "status": "failed",
+          "title": "finds a custom component (fails)"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "finds an HTML element with queryTarget "
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <Multiple />\nwhen rendered with event 'mouseDown', { clientX: 5 } on <ClickerDisplay class=\"two\" /> queried for <ClickerDisplay class=\"two\"><span queryTarget={true} /></ClickerDisplay> to have exactly rendered <span class=\"stateless\">Clicked 4 not</span>\n\n<span class=\"stateless\">\n  Clicked 5 // -Clicked 5\n            // +Clicked 4 not\n</span>\n"
+          ],
+          "status": "failed",
+          "title": "finds an HTML element with queryTarget (fails)"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <StatelessWrapper />\nto render as <Stateless msg=\"cheese\"><span>ff</span></Stateless>\n\n<Stateless msg={undefined} // expected undefined to equal 'cheese'\n>\n  <span class=\"stateless\">\n    // missing ff\n  </span>\n</Stateless>\n"
+          ],
+          "status": "failed",
+          "title": "renders a stateless component (fails)"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected { count: 5 } to satisfy { count: 4 }\n\n{\n  count: 5 // should equal 4\n}\n\n    at /Users/davebrotherstone/work/personal/unexpected-preact/jest-integration/build/src/__tests__/preact.spec.js:143:7\n"
+          ],
+          "status": "failed",
+          "title": "returns a custom component from the promise (fails)"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected 'SPAN' to be 'SHOULD_BE_SPAN'\n\n-SPAN\n+SHOULD_BE_SPAN\n\n    at /Users/davebrotherstone/work/personal/unexpected-preact/jest-integration/build/src/__tests__/preact.spec.js:153:7\n"
+          ],
+          "status": "failed",
+          "title": "returns an HTML element from the promise (fails)"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "simple pass"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "simple pass with wrappers"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "simple pass with wrappers and multiple events"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "simple pass with wrappers and multiple events with args"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "triggers an event on a queried for element"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "uses the return from a stateless component render (pass)"
+        },
+        {
+          "failureMessages": [],
+          "status": "passed",
+          "title": "with `on` with attribute match triggers on right component"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <Multiple />\nwhen rendered with event 'mouseDown', { clientX: 5 } on <ClickerDisplay class=\"two\" /> to have rendered <div><span>Clicked 0</span><span>Clicked 6</span></div>\n\n<div>\n  <ClickerDisplay class=\"one\">\n    <div onClick={function bound onClick() { /* native code */ }}\n       onMouseDown={function bound onMouseDown() { /* native code */ }}\n       class=\"multiple foo\">\n      <StatelessWrapper msg=\"Clicked 0\" id=\"foo\">\n        <Stateless msg=\"Clicked 0\">\n          <span class=\"stateless\">Clicked 0</span>\n        </Stateless>\n      </StatelessWrapper>\n    </div>\n  </ClickerDisplay>\n  <ClickerDisplay class=\"two\">\n    <div onClick={function bound onClick() { /* native code */ }}\n       onMouseDown={function bound onMouseDown() { /* native code */ }}\n       class=\"multiple foo\">\n      <StatelessWrapper msg=\"Clicked 5\" id=\"foo\">\n        <Stateless msg=\"Clicked 5\">\n          <span class=\"stateless\">\n            Clicked 5 // -Clicked 5\n                      // +Clicked 6\n          </span>\n        </Stateless>\n      </StatelessWrapper>\n    </div>\n  </ClickerDisplay>\n</div>\n"
+          ],
+          "status": "failed",
+          "title": "with `on` with attribute match triggers on right component (fails)"
+        },
+        {
+          "failureMessages": [
+            "UnexpectedError: \nexpected <ClickerDisplay />\nwhen rendered with event 'mouseDown', { clientX: 5 } with event 'click', 'to have rendered', <span>Clicked 2</span>\n\n<div onClick={function bound onClick() { /* native code */ }}\n   onMouseDown={function bound onMouseDown() { /* native code */ }}\n   class=\"multiple foo\">\n  <StatelessWrapper msg=\"Clicked 6\" id=\"foo\">\n    <Stateless msg=\"Clicked 6\">\n      <span class=\"stateless\">\n        Clicked 6 // -Clicked 6\n                  // +Clicked 2\n      </span>\n    </Stateless>\n  </StatelessWrapper>\n</div>\n"
+          ],
+          "status": "failed",
+          "title": "with wrappers and multiple events with args (fails)"
+        }
+      ],
+      "message": "  ● to render as › content fail\n\n    UnexpectedError: \n    expected <ClickerDisplay />\n    to render as <div><StatelessWrapper msg=\"Clicked 0\"><span>foo</span></StatelessWrapper></div>\n    \n    <div onClick={function bound onClick() { /* native code */ }}\n       onMouseDown={function bound onMouseDown() { /* native code */ }}\n       class=\"multiple foo\">\n      <StatelessWrapper msg=\"Clicked 0\" id=\"foo\">\n        <Stateless msg=\"Clicked 0\">\n          <span class=\"stateless\">\n            Clicked 0 // -Clicked 0\n                      // +foo\n          </span>\n        </Stateless>\n      </StatelessWrapper>\n    </div>\n",
+      "name": "/src/__tests__/preact.spec.js",
+      "status": "failed",
+      "summary": ""
+    }
+  ],
+  "wasInterrupted": false
+}

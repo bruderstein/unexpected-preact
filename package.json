@@ -5,6 +5,7 @@
   "main": "lib/unexpected-preact.js",
   "scripts": {
     "test": "mocha --compilers js:babel-register src/**/*.spec.js",
+    "integration-test": "cd jest-integration && ./run.sh",
     "build": "babel src -d lib --source-maps",
     "prepublish": "npm run build",
     "generate-site": "generate-site --require ./bootstrap-documentation-generation.js",
