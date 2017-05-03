@@ -1,3 +1,8 @@
+v2.0.2
+* Fix for `'queried for'` followed by `'with event'`
+* Fix for triggering events with incorrectly cased event names - the case is now automatically corrected
+* Integration tests added - now integration tested with preact 6, 7 and 8
+
 v2.0.1
 * Bump for new README and docs
 
