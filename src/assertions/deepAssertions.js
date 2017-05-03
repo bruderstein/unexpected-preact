@@ -85,6 +85,86 @@ const eventConstructorMap = {
   wheel: window.WheelEvent
 };
 
+// Map the lowercase to the canonical case of the event
+const caseMapping = {
+  animationend: 'animationend',
+  animationiteration: 'animationiteration',
+  animationstart: 'animationstart',
+  beforeunload: 'beforeunload',
+  beginevent: 'beginEvent',
+  blur: 'blur',
+  click: 'click',
+  compositionend: 'compositionend',
+  compositionstart: 'compositionstart',
+  compositionupdate: 'compositionupdate',
+  contextmenu: 'contextmenu',
+  dblclick: 'dblclick',
+  domactivate: 'DOMActivate',
+  domattributenamechanged: 'DOMAttributeNameChanged',
+  domattrmodified: 'DOMAttrModified',
+  domcharacterdatamodified: 'DOMCharacterDataModified',
+  domelementnamechanged: 'DOMElementNameChanged',
+  domnodeinserted: 'DOMNodeInserted',
+  domnodeinsertedintodocument: 'DOMNodeInsertedIntoDocument',
+  domnoderemoved: 'DOMNodeRemoved',
+  domnoderemovedfromdocument: 'DOMNodeRemovedFromDocument',
+  domsubtreemodified: 'DOMSubtreeModified',
+  drag: 'drag',
+  dragend: 'dragend',
+  dragenter: 'dragenter',
+  dragleave: 'dragleave',
+  dragover: 'dragover',
+  dragstart: 'dragstart',
+  drop: 'drop',
+  end: 'end',
+  error: 'error',
+  focus: 'focus',
+  gamepadconnected: 'gamepadconnected',
+  gamepaddisconnected: 'gamepaddisconnected',
+  gotpointercapture: 'gotpointercapture',
+  hashchange: 'hashchange',
+  lostpointercapture: 'lostpointercapture',
+  keydown: 'keydown',
+  keypress: 'keypress',
+  keyup: 'keyup',
+  load: 'load',
+  mousedown: 'mousedown',
+  mouseenter: 'mouseenter',
+  mouseleave: 'mouseleave',
+  mousemove: 'mousemove',
+  mouseout: 'mouseout',
+  mouseover: 'mouseover',
+  mouseup: 'mouseup',
+  paste: 'paste',
+  pointercancel: 'pointercancel',
+  pointerdown: 'pointerdown',
+  pointerenter: 'pointerenter',
+  pointerleave: 'pointerleave',
+  pointermove: 'pointermove',
+  pointerout: 'pointerout',
+  pointerover: 'pointerover',
+  pointerup: 'pointerup',
+  repeatevent: 'repeatEvent',
+  resize: 'resize',
+  scroll: 'scroll',
+  select: 'select',
+  show: 'show',
+  svgabort: 'SVGAbort',
+  svgerror: 'SVGError',
+  svgload: 'SVGLoad',
+  svgresize: 'SVGResize',
+  svgscroll: 'SVGScroll',
+  svgunload: 'SVGUnload',
+  svgzoom: 'SVGZoom',
+  touchcancel: 'touchcancel',
+  touchend: 'touchend',
+  touchmove: 'touchmove',
+  touchstart: 'touchstart',
+  transitionend: 'transitionend',
+  unload: 'unload',
+  wheel: 'wheel'
+};
+
 function triggerEvent(expect, component, target, eventName, eventArgs) {
   let targetDOM = component;
 
@@ -96,6 +176,8 @@ function triggerEvent(expect, component, target, eventName, eventArgs) {
     targetDOM = target.node;
   }
 
+  // Map the case
+  eventName = caseMapping[eventName.toLowerCase()] || eventName;
   const EventConstructor = eventConstructorMap[eventName] || window.Event;
   let event = new EventConstructor(
     eventName,
