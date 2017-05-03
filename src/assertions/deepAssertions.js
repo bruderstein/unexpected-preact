@@ -168,6 +168,13 @@ const caseMapping = {
 function triggerEvent(expect, component, target, eventName, eventArgs) {
   let targetDOM = component;
 
+  if (!target && component && (
+        component.type === PreactRenderedAdapter.COMPONENT_TYPE ||
+        component && component.type === PreactRenderedAdapter.NODE_TYPE
+      )) {
+    targetDOM = component.node;
+  }
+
   if (targetDOM.hasOwnProperty('props') && targetDOM.hasOwnProperty('context') && typeof targetDOM.setState === 'function') {
     // This is an instance of a component from preact-compat
     targetDOM = targetDOM.base;

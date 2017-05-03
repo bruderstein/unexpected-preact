@@ -16,6 +16,7 @@ const PreactRenderedAdapter = require('unexpected-htmllike-preactrendered-adapte
 
 const Preact = require('preact');
 const PreactCompat = require('preact-compat');
+const { Multiple, Stateless, Clicker } = require('./components/Clicker');
 
 const expect = Unexpected.clone()
     .use(UnexpectedPreact);
@@ -852,7 +853,7 @@ function runTests({ h, Component, render }, testGroupDescription) {
           const component = renderIntoDocument(<TodoList />);
           expect(component,
             'queried for', <TodoItem id={2}/>,
-            'with event', 'click', 'on', <button />,
+            'with event', 'click', {}, 'on', <button />,
             'to have rendered',
             <div>
               <span>two</span>
@@ -860,6 +861,19 @@ function runTests({ h, Component, render }, testGroupDescription) {
             </div>
           );
 
+        });
+
+        it('combines with queried for without an `on`', function () {
+          // This is a bit special as the `on` in the event means the new target is used differently
+          // I think this is an inconsistency in the AssertionGenerator, but we've worked around it in
+          // the triggering of events for now
+          return expect(<Multiple />,
+            'when rendered',
+            'queried for', <Clicker className="two"><span /></Clicker>,
+            'with event', 'mouseDown', { clientX: 5 },
+            'to have rendered',
+            <span>Clicked 5</span>
+          );
         });
 
         it('combines with queried for using the result promise', () => {
