@@ -1,8 +1,9 @@
 {
   "name": "unexpected-preact",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Assertion library for preact.js - sister project to unexpected-react",
   "main": "lib/unexpected-preact.js",
+  "repository": "https://github.com/bruderstein/unexpected-preact.git",
   "scripts": {
     "test": "mocha --compilers js:babel-register src/**/*.spec.js",
     "integration-test": "cd jest-integration && ./run.sh",
