@@ -681,12 +681,30 @@ function runTests({ h, Component, render }, testGroupDescription) {
         );
       });
 
+      it('calls click on a sub component with `to contain <string>`', () => {
+        const component = renderIntoDocument(<ClickableComponent />);
+
+        expect(component, 'with event', 'click', 'on', <span class="item-click"/>,
+          'to contain',
+          'Item clicked 2'
+        );
+      });
+
       it('calls click on a sub component with `not to contain`', () => {
         const component = renderIntoDocument(<ClickableComponent />);
 
         expect(component, 'with event', 'click', 'on', <span class="item-click"/>,
           'not to contain',
           <span class="item-click">Item clicked 1</span>
+        );
+      });
+
+      it('calls click on a sub component with `not to contain <string>`', () => {
+        const component = renderIntoDocument(<ClickableComponent />);
+
+        expect(component, 'with event', 'click', 'on', <span class="item-click"/>,
+          'not to contain',
+          'Item clicked 1'
         );
       });
 

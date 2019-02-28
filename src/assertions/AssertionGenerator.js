@@ -454,14 +454,14 @@ AssertionGenerator.prototype._installEventHandlerAssertions = function (expect) 
   
   const actualPendingEventTypeName = this._actualPendingEventTypeName;
 
-  expect.addAssertion([`<${actualPendingEventTypeName}> [not] to contain [exactly] <${expectedTypeName}>`,
-    `<${actualPendingEventTypeName}> [not] to contain [with all children] [with all wrappers] [with all classes] [with all attributes] <${expectedTypeName}>`],
+  expect.addAssertion([`<${actualPendingEventTypeName}> [not] to contain [exactly] <${expectedTypeName}|string>`,
+    `<${actualPendingEventTypeName}> [not] to contain [with all children] [with all wrappers] [with all classes] [with all attributes] <${expectedTypeName}|string>`],
     function (expect, subject, expected) {
       triggerEvent(subject.renderer, subject.target, subject.eventName, subject.eventArgs);
       return expect(subject.renderer, '[not] to contain [exactly] [with all children] [with all wrappers] [with all classes] [with all attributes]', expected);
   });
-  
-  expect.addAssertion(`<${actualPendingEventTypeName}> to have [exactly] rendered [with all children] [with all wrappers] [with all classes] [with all attributes] <${expectedTypeName}>`,
+
+  expect.addAssertion(`<${actualPendingEventTypeName}> to have [exactly] rendered [with all children] [with all wrappers] [with all classes] [with all attributes] <${expectedTypeName}|string>`,
     function (expect, subject, expected) {
       triggerEvent(subject.renderer, subject.target, subject.eventName, subject.eventArgs);
       return expect(subject.renderer, 'to have [exactly] rendered [with all children] [with all wrappers] [with all classes] [with all attributes]', expected);
