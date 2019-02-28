@@ -33,13 +33,13 @@ const writerOptions = {
 };
 
 class UnexpectedSnapshotState {
-  
+
   constructor(snapshotState) {
     const files = {};
     this._files = files;
-    
+
   }
-  
+
   getSnapshot(testPath, testName, expect) {
     let snapshot = this._files[testPath];
     if (!snapshot) {
@@ -54,7 +54,7 @@ class UnexpectedSnapshotState {
           return agg;
         }, contentOutput)
       }
-      
+
       snapshot = this._files[testPath] = {
         testCounter: {},
         uncheckedKeys: (content && new Set(Object.keys(content))) || new Set(),
@@ -65,22 +65,22 @@ class UnexpectedSnapshotState {
     }
     const count = (snapshot.testCounter[testName] || 0) + 1;
     snapshot.testCounter[testName] = count;
-    
+
     const keyName = testName + ' ' + count;
     snapshot.uncheckedKeys.delete(keyName);
     return snapshot.allTests[keyName] || null;
   }
-  
+
   saveSnapshot(testPath, testName, tree, expect) {
-    
+
     const snapshotPath = getSnapshotPath(testPath);
     const snapshot = this._files[testPath];
-    
+
     // If we've been passed a new tree, update the current snapshot
     // Otherwise, we're just saving the file
     if (tree) {
       const count = snapshot.testCounter[testName] || 1;
-  
+
       snapshot.allTests[testName + ' ' + count] = tree;
       snapshot.contentOutput[testName + ' ' + count] = expect.output.clone().annotationBlock(function () {
         this.append(expect.inspect(tree));
@@ -89,8 +89,12 @@ class UnexpectedSnapshotState {
     const dir = path.dirname(snapshotPath);
     let exists;
     try {
-      exists = fs.statSync(dir).isDirectory();
+      const statResult = fs.statSync(dir)
+      console.log('statResult', dir, 'is', statResult.isDirectory());
+      exists = statResult.isDirectory();
+
     } catch (e) {
+      console.log('Exception doing fs.statSync', e);
       exists = false;
     }
     if (!exists) {
@@ -102,7 +106,7 @@ class UnexpectedSnapshotState {
     }).join('\n\n');
     fs.writeFileSync(snapshotPath, fileContent);
   }
-  
+
   markTestAsFailed(testPath, testName) {
     const snapshot = this._files[testPath];
     snapshot.failedTests.add(testName);
@@ -113,16 +117,16 @@ function getSnapshotPath(testPath) {
   const testPathParsed = path.parse(testPath);
   testPathParsed.dir = path.join(testPathParsed.dir, '__snapshots__');
   testPathParsed.base = testPathParsed.name + '.unexpected-snap';
-  
+
   return path.format(testPathParsed);
 }
 
 const rawAdapter = new RawAdapter({ convertToString: true, concatTextContent: true });
 
 function compareSnapshot(expect, flags, subjectAdapter, subjectRenderer, subjectOutput) {
-  
+
   const state = matchers.getState();
-  
+
   if (!state.unexpectedSnapshot) {
     state.unexpectedSnapshot = new UnexpectedSnapshotState(state.snapshotState);
   }
@@ -158,7 +162,7 @@ function injectStateHooks() {
   const snapshotState = state && state.snapshotState;
   if (snapshotState) {
     const originalRemoveUncheckedKeys = snapshotState.removeUncheckedKeys;
-    
+
     snapshotState.removeUncheckedKeys = function () {
       const state = matchers.getState();
       let isDirty = false;
@@ -166,14 +170,14 @@ function injectStateHooks() {
       if (snapshot && snapshot.uncheckedKeys.size) {
         snapshot.uncheckedKeys.forEach(key => {
           const testName = /(.*)\s[0-9]+$/.exec(key)[1];
-          
+
           if (!snapshot.failedTests.has(testName)) {
             isDirty = true;
             delete snapshot.allTests[key]
           }
         });
       }
-      
+
       if (!snapshot || Object.keys(snapshot.allTests).length === 0) {
         const snapshotPath = getSnapshotPath(state.testPath);
         try {
@@ -183,7 +187,7 @@ function injectStateHooks() {
         } catch (e) {
           // We're ignoring file-not-found exceptions, and errors deleting
         }
-        
+
         if (state.unexpectedSnapshot) {
           delete state.unexpectedSnapshot._files[state.testPath];
         }
