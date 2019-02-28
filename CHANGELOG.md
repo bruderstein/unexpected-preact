@@ -1,3 +1,11 @@
+
+v2.0.4
+* Update unexpected-htmllike-preactrendered-adapter to support elements created in `dangerouslySetInnerHTML`
+* Fix bug with `'to contain <string>'` on pending-event type (thanks @salomvary for reporting)
+
+v2.0.3
+* No package changes, just add a missing repo link in package.json
+
 v2.0.2
 * Fix for `'queried for'` followed by `'with event'`
 * Fix for triggering events with incorrectly cased event names - the case is now automatically corrected
