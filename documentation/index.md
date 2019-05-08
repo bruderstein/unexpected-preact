@@ -47,7 +47,7 @@ expect(
 expect(
   <TodoList items={items} />,
   'when rendered',
-  'with event click',
+  'with event', 'click',
   'on', <TodoItem id={2}><span className="label" eventTarget /></TodoItem>,
   'to contain',
   <TodoItem id={2}>
@@ -80,7 +80,7 @@ expect(
 expect(
   <TodoList items={items} />,
   'when rendered',
-  'with event click',
+  'with event', 'click',
   'on', <TodoItem id={1}><span className="label" eventTarget /></TodoItem>,
   'queried for', <TodoItem id={1} />
 ).then(todoItem => {
